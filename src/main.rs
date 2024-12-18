@@ -73,7 +73,7 @@ use std::cmp::Ordering;
 // }
 
 
-// fn main () {
+// fn main () {dasdasdasdasdas
 //     let mut my_age: i32 = 47;
 //     let can_vote = if my_age >= 18{
 //         true
@@ -83,12 +83,52 @@ use std::cmp::Ordering;
 //     println!("Can Vote: {}", can_vote);
 // }
 
+// fn main () {
+//     let age2 = 8;
+//     match age2 {
+//         0..=18 => println!("Important Birthday"),
+//         21 | 50 => println!("Not so Important Birthday"),
+//         65..=i32::MAX => println!("Crazy important Birthday"),   
+//         _ =>println!("Not an Important Birthday ")
+//     }; 
+// }
+
+// fn main () {
+//     let my_age = 20;
+//     println!("My age is {}", my_age); 
+//     let votingAge = 18;
+//     match my_age.cmp(&votingAge) {
+//         Ordering::Less => println!("Cant vote"),
+//         Ordering::Greater => println!("Can vote"),
+//         Ordering::Equal => println!("Can vote"),
+        
+//     }
+// }
+
+// Arrays with RUST!!
 fn main () {
-    let age2 = 8;
-    match age2 {
-        0..=18 => println!("Important Birthday"),
-        21 | 50 => println!("Not so Important Birthday"),
-        65..=i32::MAX => println!("Crazy important Birthday"),   
-        _ =>println!("Not an Important Birthday ")
-    };
+    let arr_1 = [1,2,3,4,5];
+    println!("First element of the array: {}",arr_1.len());
+    let mut arr_1_index = 0;
+    while(arr_1_index != arr_1.len()) {
+        println!("{}", arr_1[arr_1_index]);
+        arr_1_index += 1;
+    }
+
+    let my_tuple: (u8,String, f64) = (47, "Res".to_string(), 4.0);
+    println!("Here is my tuple {}", my_tuple.1);
+
+
+    // Strings with Rust
+     // There are 2 types of strings
+    // 1. String : Vector of bytes that can be changed
+    // 2. &str : Points to the string and allows for viewing
+    let mut st1 = String::new();
+    st1.push('a');
+
+    st1.push_str(" word");
+
+    for word in st1.split_whitespace(){
+        println!("{}", word);
+    }    
 }
